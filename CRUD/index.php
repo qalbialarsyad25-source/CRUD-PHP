@@ -25,7 +25,6 @@ $data = $koneksi->query("SELECT * FROM produk ORDER BY id DESC");
 
         <table>
             <tr>
-                <th>ID</th>
                 <th>Nama</th>
                 <th>Harga</th>
                 <th>Stok</th>
@@ -33,7 +32,6 @@ $data = $koneksi->query("SELECT * FROM produk ORDER BY id DESC");
             </tr>
             <?php while ($row = $data->fetch_assoc()): ?>
             <tr>
-                <td><?= $row['id'] ?></td>
                 <td><?= htmlspecialchars($row['nama']) ?></td>
                 <td><?= number_format($row['harga'], 0, ',', '.') ?></td>
                 <td><?= $row['stok'] ?></td>
